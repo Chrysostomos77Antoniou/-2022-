@@ -1,0 +1,17 @@
+print("ΚΑΛΩΣΟΡΙΣΕΣ")
+lst=[]
+t = int(input("ΔΩΣΕ ΤΟΝ ΜΙΚΡΟΤΕΡΟ ΑΡΙΘΜΟ ΠΟΥ ΘΕΛΕΙΣ ΝΑ ΦΤΙΑΧΝΟΥΝ ΟΙ ΑΡΙΘΜΟΙ ΤΗΣ ΛΙΣΤΑΣ:"))
+n = int(input("ΠΟΣΟΥΣ ΑΡΙΘΜΟΥΣ ΘΑ ΕΧΕΙ Η ΛΙΣΤΑ: "))
+for i in range(0, n):
+    ele = int(input())
+    while (ele in lst):
+        print("ΥΠΑΡΧΕΙ ΙΔΙ")
+        ele = [int(input())]
+    lst.append(ele)
+def threash(lst,t):
+    for i in range(0,n):
+        for j in range(0,n):
+            for k in range(0,n):
+                if(lst[i] != lst[j] and lst[j] != lst[k] and lst[i] != lst[k] and lst[i]*100+lst[j]*10+lst[k] > t):
+                    print(lst[i]*100+lst[j]*10+lst[k])
+threash(lst,t)
