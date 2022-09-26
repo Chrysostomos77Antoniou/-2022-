@@ -1,0 +1,98 @@
+print("WELCOME")
+names={0:"", 1:"one",	2:"two", 3:"three",	4:"four", 5:"five",	6:"six", 7:"seven", 8:"eight", 9:"nine", 10:"ten", 11:"eleven",	12:"twelve", 13:"thirteen",	14:"fourteen", 15:"fifteen", 16:"sixteen", 17:"seventeen", 18:"eighteen", 19:"nineteen", 20:"twenty",30:"thirty", 40:"forty", 50:"fifty", 60:"sixty", 70:"seventy", 80:"eighty", 90:"ninety", 100:"hunderd", 1000:"thousand"}
+n = int(input("NUMBER: "))
+while(n>=1000000):
+    print("THE NUMBER MUST BE BELOW 1000000:")
+    n = int(input("NUMBER: "))
+def latin(n):
+    if n>0 and n<=9:
+        a=names.get(n)
+        print("THE NUMBER ", n ,"IN LATIN CHARACTERS IS:", a)
+    elif n>9 and n<=99:
+        b=n%10
+        b=names.get(b)
+        c=n//10
+        c=c*10
+        c=names.get(c)
+        print("THE NUMBER ", n, "IN LATIN CHARACTERS IS:", c,b)
+    elif n>99 and n<=999:
+       int = d=n//100
+       int = d=names.get(d)
+       int = e=(n%100)
+       int = e=e//10
+       int = e=e*10
+       int = e=names.get(e)
+       int = f=n%100
+       int = f=f%10
+       int = f=names.get(f)
+       print("THE NUMBER ", n,"IN LATIN CHARACTERS IS:",d,"hundred",e,f)
+    elif n>999 and n<=9999:
+        g=n//1000
+        g=names.get(g)
+        j = n % 1000
+        j = j // 100
+        j = names.get(j)
+        i=n%1000
+        i=i%100
+        i=i%10
+        i=i*10
+        i=names.get(i)
+        k=n%1000
+        k=k%100
+        k=k%10
+        k=names.get(k)
+        print("THE NUMBER ", n, "IN LATIN CHARACTERS IS:", g,"thousand", j, "hundred", i,k )
+    elif n>9999 and n<=99999:
+        m=n//1000
+        m=m//10
+        m=m*10
+        m=names.get(m)
+        r=n//1000
+        r=r%10
+        r=names.get(r)
+        o=n%1000
+        o=o//100
+        o=names.get(o)
+        p=n%100
+        p=p//10
+        p=p*10
+        p=names.get(p)
+        q=n%10
+        q=names.get(q)
+        print("THE NUMBER ", n, "IN LATIN CHARACTERS IS:", m, r, "thousand", o, "hundred", p, q)
+    elif n>99999 and n<=999999:
+        l=n//1000
+        l=l//100
+        l=names.get(l)
+        t=n//1000
+        t=t%100
+        t=t//10
+        t=t*10
+        t=names.get(t)
+        u=n//1000
+        u=u%100
+        u=u%10
+        u=names.get(u)
+        v=n%1000
+        v=v//100
+        v=names.get(v)
+        w=n%1000
+        w=w%100
+        w=w//10
+        w=w*10
+        w=names.get(w)
+        x=n%1000
+        x=x%100
+        x=x%10
+        x=names.get(x)
+        print("THE NUMBER ", n, "IN LATIN CHARACTERS IS:", l, "hundred", t, u, "thousand", v, "hundred", w, x)
+
+
+
+
+
+
+latin(n)
+
+
+
