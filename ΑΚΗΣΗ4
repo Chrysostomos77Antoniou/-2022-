@@ -1,0 +1,31 @@
+
+import urllib.request
+link = "http://www.somesite.com/details.pl?urn=2344"
+str = c = link
+f = urllib.request.urlopen(link)
+myfile = f.read()
+print("FILE:", myfile)
+def FileWiki(fl,url):
+    x = 1
+    r = 1
+    f = 1
+    for i in link:
+        p = link.count(i)
+        if p > r:
+            r = p
+            s = i
+    for j in link:
+        w = link.count(j)
+        if w>x and s!=j:
+            x=w
+            l=j
+    for k in c:
+        q = c.count(k)
+        if q>f and (s+l)==k:
+            f=q
+    print("The most times appear the character:","'", s, "'", "with:", r, "times")
+    print("The second with most appears times is:", "'", l,"'", "with:", x, "times")
+    print("URL:", c)
+    print("The combination of the characters in the url:","'", s+l,"'","appear:",f,'times')
+FileWiki(link,c)
+
